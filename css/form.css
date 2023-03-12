@@ -1,0 +1,216 @@
+.form{
+    margin-top: 80px;
+}
+
+.form .group{
+    display: flex;
+    flex: 0 0 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.form .group-check{
+    flex: 0 0 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+}
+
+.form .group-radio{
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form .groups{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@keyframes moverBotao {
+    0%{
+        transform: translate(0px, 0px) scale(1) rotate(0deg);
+        background-color: #4c59f4;
+        border: 5px solid #555;
+    }
+
+    25%{
+        transform: translate(100px, 0px) scale(1.6) rotate(90deg);
+        background-color: #00f3ff;
+        border: 5px dotted #555;
+    }
+
+    50%{
+        transform: translate(100px, 100px) scale(1.4) rotate(180deg);
+        background-color: #379024;
+        border: 5px dashed #555;
+    }
+
+    75%{
+        transform: translate(0px, 100px) scale(1.2) rotate(270deg);
+        background-color: #ffa726;
+        border: 5px double #555;
+    }
+
+    100%{
+        transform: translate(0px, 0px) scale(1) rotate(0deg);
+        background-color: #4c59f4;
+        border: 5px solid #555;
+    }
+}
+
+@keyframes linear-progresso {
+    from{
+        width: 0%;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+.form .btn{
+    margin: 10px 20px;
+    color: white;
+    background-color: #4c59f4;
+    border: 1px solid #2531c7;
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: 1px 2px 4px #ccc;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
+.form .btn:hover{
+    background-color: #070d52;
+}
+
+.linha{
+    width: 100%;
+    height: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;   
+}
+
+.progresso{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: -1px;
+    background: linear-gradient(90deg,#64b5f6,#388e3c);
+    animation-name: linear-progresso; 
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(10);
+}
+
+.form .title{
+    text-align: center;
+}
+
+.form .group .input{
+    padding: 5px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+}
+
+.form .group-check input[type=checkbox]{
+    display: none;
+}
+
+.form .group-check .checkbox{
+    color: white;
+    width: 30px;
+    height: 10px;
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin-right: 7px;
+    border: 1px solid #aaa;
+    display: block;
+}
+
+.form .group-check .circle-checkbox{
+    height: 20px;
+    width: 20px;
+    border-radius: 12px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: 1px solid #999;
+    background-color: #ddd;
+    transition: left 0.2s;
+}
+
+.form .group-check .content-checkbox{
+    position: relative;
+}
+
+.form .group-check .content-checkbox input[type=checkbox]:checked + .circle-checkbox{
+    border: 1px solid #3361bf;
+    background-color: #3e76e8;
+    left: 25px;
+}
+
+@keyframes aparecendoCarta {
+    from{
+        transform: rotate3d(0,1,0,-90deg);
+    }
+
+    to{
+        transform: rotate3d(0,1,0,0deg);
+    }
+}
+
+@keyframes desaparacerTras {
+    from{
+        transform: rotate3d(0,1,0,0deg);
+    }
+
+    50%{
+        transform: rotate3d(0,1,0,90deg);
+    }
+
+    to{
+        transform: rotate3d(0,1,0,90deg);
+    }
+}
+
+.content-carta{
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    position: relative;
+}
+
+.content-carta:hover .carta{
+    animation-name: aparecendoCarta; 
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+}
+
+.content-carta:hover .carta-tras{
+    animation-name: desaparacerTras; 
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+.carta, .carta-tras{
+    width: 170px;
+    top: calc(50% - 123px);
+}
+
+.carta{
+    position: relative;
+    transform: rotate3d(0,1,0,-90deg);
+}
+
+.carta-tras{
+    position: absolute;
+    height: 246px;
+    z-index: 1;
+    transform: rotate3d(0,1,0,0deg);
+}

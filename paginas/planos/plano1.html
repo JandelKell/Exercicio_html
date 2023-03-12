@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Nosso Blog - Grupo 2</title>
+
+        <link rel="stylesheet" href="../../css/reset.css">
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/form.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <header>
+            <div id="cabecalho">
+                
+                <img id="logo_topo" src="../../img/1.svg">
+                <nav id="menu"> 
+                    <ul> 
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../sobre_nos.html">Sobre nós</a></li>
+                    <li><a href="../planos.html">Planos</a></li>
+                    </ul> 
+                </nav>
+            </div>
+          
+        </header>
+        <form class="form" 
+            method="POST">
+
+            <h2 class="title">Formulário de cadastro de usuário</h2>
+
+            <div class="groups">
+                <div class="group">
+                    <label>Nome</label>
+                    <input class="input" type="text" name="nome">
+                </div>
+
+                <div class="group">
+                    <label>CPF</label>
+                    <input maxlength="14" minlength="14" class="input" type="text" placeholder="000.000.000-00" name="cpf">
+                </div>
+
+                <div class="group">
+                    <label>E-mail</label>
+                    <input required class="input" type="email" name="email">
+                </div>
+
+                <div class="group-check">
+                    <div class="content-checkbox">
+                        <input checked required id="termos-id" type="checkbox" name="termos">
+                        <label class="circle-checkbox" for="termos-id"></label>
+                        <label class="checkbox" for="termos-id"></label>
+                    </div>
+                    <label for="termos-id">Termos de Uso</label>
+                </div>
+
+                <div class="group-radio">
+                    <label>Planos</label><br>
+                    <input checked id="plano_completo" type="radio" name="indice" value="1"> 
+                    <label for="plano_completo">Plano Completo</label><br>
+                    <input id="plano_intermediario" type="radio" name="indice" value="2"> 
+                    <label for="plano_intermediario">Planto Intermediário</label><br>
+                    <input id="plano_basico" type="radio" name="indice" value="3"> 
+                    <label for="plano_basico">Plano Básico</label>
+                </div>
+
+            </div>
+
+            <button class="btn">Enviar</button>
+
+            <div class="linha">
+                <div class="progresso"></div>
+            </div>
+        </form>
+        </footer>
+    </body>
+</html>

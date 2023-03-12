@@ -1,0 +1,62 @@
+
+
+header{
+    box-sizing: border-box;
+    background-color: lightblue;
+    height: 20vh;
+}
+
+#cabecalho{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo_topo {
+    width: 65px;
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+#body{
+    background-color:#ffffef;
+    padding: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    min-height: 60vh;
+}
+
+#body h1{
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 30px;
+}
+
+#logo_inferior{
+    width: 50px;
+    padding: 10px;
+}
+
+footer{
+    padding: 10px;
+    display: flex;
+    background-color: lightblue;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 20vh;
+}
+footer p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+}
+#paisagem{
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+
