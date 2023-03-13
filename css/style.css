@@ -3,7 +3,7 @@
 header{
     box-sizing: border-box;
     background-color: lightblue;
-    height: 20vh;
+    min-height: 121px;
 }
 
 #cabecalho{
@@ -53,7 +53,7 @@ footer p{
     font-size: 11px;
 }
 #paisagem{
-    width: 95%;
+    width: 50%;
     padding: 10px;
     margin-top: 10px;
 }
